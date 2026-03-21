@@ -1,0 +1,88 @@
+/* Element */
+p {
+  color: rgba(211, 106, 106, 0.502);
+}
+
+/* wiele elementów */
+p,
+div,
+ul,
+tr,
+.red,
+#asd {
+  padding: 20px;
+}
+
+/* Klasa */
+.card {
+  padding: 20px;
+}
+.w300 {
+  width: 300px;
+}
+.m30 {
+  margin: 30px;
+}
+
+/* Id */
+
+#header {
+  height: 80px;
+}
+
+/* Potomek */
+article p {
+  line-height: 1.6;
+}
+
+/* Dziecko */
+ul > li {
+  list-style: square;
+}
+
+/* Atrybut */
+
+input[type='text'] {
+  border: 1px solid rgb(195, 32, 32);
+}
+input[disabled] {
+  border: 1px solid gray;
+}
+
+/* Pseudo klasy */
+
+/* hover  */
+button:hover {
+  background: #f7797d;
+}
+
+/* focus  */
+input:focus {
+  outline: 2px solid #f7797d;
+}
+
+/* first-child / last-child / nth-child */
+li {
+  border-bottom: 1px solid #000;
+}
+li:last-child {
+  border-bottom: none;
+}
+li:nth-child(odd) {
+  background: #bfbfbf;
+}
+
+/* not */
+button:not(.card) {
+  opacity: 0.7;
+}
+
+/* is / where */
+:is(h1, h2, h3) :is(.author, .subtitle) {
+  font-family: sans-serif;
+}
+
+/* has */
+.card:has(img) {
+  padding-top: 0;
+}
