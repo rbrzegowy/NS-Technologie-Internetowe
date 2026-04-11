@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="flexbox-basics.css" />
+    <title>Flexbox</title>
+  </head>
+  <body>
+    <header>
+      <h1>Flexbox</h1>
+    </header>
+    <main>
+      <section class="grid-step">
+        <div class="step-copy">
+          <span class="step-number">1</span>
+          <h2>Włączenie Flexboxa</h2>
+          <ul>
+            <li>Kontener staje się kontenerem flex</li>
+            <li>Elementy potomne układają się w rzędzie/kolumnie</li>
+            <li>Osie: główna (main axis) i poprzeczna (cross axis)</li>
+          </ul>
+          <code>display: flex;</code>
+        </div>
+        <div class="demo-flex demo-flex-step-1">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+        </div>
+      </section>
+
+      <section class="grid-step">
+        <div class="step-copy">
+          <span class="step-number">2</span>
+          <h2>Kierunek osi głównej</h2>
+          <ul>
+            <li>Zmienia kierunek osi głównej</li>
+            <li>Możliwe: row, row-reverse, column, column-reverse</li>
+          </ul>
+          <code>flex-direction: column;</code>
+        </div>
+        <div class="demo-flex demo-flex-step-2">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+        </div>
+      </section>
+
+      <section class="grid-step">
+        <div class="step-copy">
+          <span class="step-number">3</span>
+          <h2>Zawijanie</h2>
+          <ul>
+            <li>Zawijanie - domyślnie elementy próbują zmieścić się w jednym wierszu/kolumnie</li>
+            <li>flex-wrap: wrap pozwala przenosić je do kolejnego wiersza/kolumny</li>
+          </ul>
+          <code>flex-wrap: wrap;</code>
+        </div>
+        <div class="demo-flex demo-flex-step-3">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+        </div>
+      </section>
+
+      <section class="grid-step">
+        <div class="step-copy">
+          <span class="step-number">4</span>
+          <h2>Wyrównanie na osi głównej</h2>
+          <ul>
+            <li>justify-content steruje rozmieszczeniem na osi głównej</li>
+            <li>Możliwe m.in. center, space-between, space-around, space-evenly</li>
+          </ul>
+          <code>justify-content: space-between;</code>
+        </div>
+        <div class="demo-flex demo-flex-step-4">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+        </div>
+      </section>
+
+      <section class="grid-step">
+        <div class="step-copy">
+          <span class="step-number">5</span>
+          <h2>Wyrównanie na osi poprzecznej</h2>
+          <ul>
+            <li>align-items ustawia elementy względem osi poprzecznej</li>
+            <li>Działa dla pojedynczej linii elementów</li>
+            <li>W przykładzie ustawienie na koniec osi: flex-end</li>
+          </ul>
+          <code>align-items: flex-end;</code>
+        </div>
+        <div class="demo-flex demo-flex-step-5">
+          <div class="flex-item flex-item-h-1">1</div>
+          <div class="flex-item flex-item-h-2">2</div>
+          <div class="flex-item flex-item-h-3">3</div>
+          <div class="flex-item flex-item-h-4">4</div>
+        </div>
+      </section>
+
+      <section class="grid-step">
+        <div class="step-copy">
+          <span class="step-number">6</span>
+          <h2>Wiele linii: align-content</h2>
+          <ul>
+            <li>Działa tylko gdy elementy są zawinięte do wielu linii</li>
+            <li>Ustawia odstępy i położenie całych linii</li>
+            <li>W przykładzie użyte space-around</li>
+          </ul>
+          <code>flex-wrap: wrap; <br />align-content: space-around;</code>
+        </div>
+        <div class="demo-flex demo-flex-step-6">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+          <div class="flex-item">7</div>
+          <div class="flex-item">8</div>
+        </div>
+      </section>
+
+      <section class="grid-step">
+        <div class="step-copy">
+          <span class="step-number">7</span>
+          <h2>Rozmiar elementów: flex-grow</h2>
+          <ul>
+            <li>flex-grow określa jak elementy dzielą wolną przestrzeń</li>
+            <li>Wartość 0 oznacza brak rozciągania</li>
+            <li>Im większa wartość, tym większy udział w wolnym miejscu</li>
+          </ul>
+          <code>
+            .item-2 { flex-grow: 1; }<br />
+            .item-3 { flex-grow: 2; }
+          </code>
+        </div>
+        <div class="demo-flex demo-flex-step-7">
+          <div class="flex-item">1</div>
+          <div class="flex-item item-grow-2">2</div>
+          <div class="flex-item item-grow-3">3</div>
+          <div class="flex-item">4</div>
+        </div>
+      </section>
+
+      <section class="grid-step">
+        <div class="step-copy">
+          <span class="step-number">8</span>
+          <h2>Zwężanie elementów: flex-shrink</h2>
+          <ul>
+            <li>flex-shrink określa jak element kurczy się przy braku miejsca</li>
+            <li>Wartość 0 blokuje zmniejszanie szerokości</li>
+            <li>Większa wartość oznacza szybsze oddawanie miejsca innym elementom</li>
+          </ul>
+          <code>
+            .item-a { flex-shrink: 0; }<br />
+            .item-c { flex-shrink: 3; }
+          </code>
+        </div>
+        <div class="demo-flex demo-flex-step-8-shrink">
+          <div class="flex-item item-shrink-0">A</div>
+          <div class="flex-item item-shrink-1">B</div>
+          <div class="flex-item item-shrink-3">C</div>
+        </div>
+      </section>
+
+      <section class="grid-step">
+        <div class="step-copy">
+          <span class="step-number">9</span>
+          <h2>Początkowy rozmiar: flex-basis</h2>
+          <ul>
+            <li>flex-basis ustawia bazowy rozmiar elementu na osi głównej</li>
+            <li>Przeglądarka startuje od tej wartości przed przeliczeniem grow i shrink</li>
+            <li>"Zastępuje" width w flexie</li>
+          </ul>
+          <code>
+            .item-a { flex-basis: 120px; }<br />
+            .item-b { flex-basis: 220px; }
+          </code>
+        </div>
+        <div class="demo-flex demo-flex-step-9-basis">
+          <div class="flex-item item-basis-120">120px</div>
+          <div class="flex-item item-basis-220">220px</div>
+          <div class="flex-item item-basis-auto">auto</div>
+        </div>
+      </section>
+
+      <section class="grid-step">
+        <div class="step-copy">
+          <span class="step-number">10</span>
+          <h2>Właściwości pojedynczego elementu</h2>
+          <ul>
+            <li>order zmienia kolejność wizualną elementów</li>
+            <li>align-self pozwala nadpisać align-items dla jednego elementu</li>
+            <li>Skrót flex łączy grow, shrink i basis</li>
+          </ul>
+          <code>
+            .item-b { order: -1; }<br />
+            .item-c { align-self: center; flex: 2 1 140px; }
+          </code>
+        </div>
+        <div class="demo-flex demo-flex-step-8">
+          <div class="flex-item">A</div>
+          <div class="flex-item item-order">B</div>
+          <div class="flex-item item-self">C</div>
+          <div class="flex-item">D</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

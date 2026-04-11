@@ -1,0 +1,137 @@
+@import url('./grid-basics.css');
+
+.demo-flex {
+  display: flex;
+  padding: 18px;
+  border: var(--border-width) dashed var(--panel-border);
+  border-radius: 22px;
+  min-height: 140px;
+  gap: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.flex-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 62px;
+  min-height: 56px;
+  padding: 8px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #f97655, #ff3232);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.demo-flex-step-2 {
+  flex-direction: column;
+}
+
+.demo-flex-step-3 {
+  flex-wrap: wrap;
+}
+
+.demo-flex-step-4 {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.demo-flex-step-5 {
+  min-height: 220px;
+  align-items: flex-end;
+}
+
+.flex-item-h-1 {
+  min-height: 46px;
+}
+
+.flex-item-h-2 {
+  min-height: 70px;
+}
+
+.flex-item-h-3 {
+  min-height: 94px;
+}
+
+.flex-item-h-4 {
+  min-height: 124px;
+}
+
+.demo-flex-step-6 {
+  min-height: 260px;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+.demo-flex-step-6 .flex-item {
+  min-width: 74px;
+}
+
+.demo-flex-step-7 .item-grow-2 {
+  flex-grow: 1;
+  background: linear-gradient(135deg, #35566b, #4f95ad);
+}
+
+.demo-flex-step-7 .item-grow-3 {
+  flex-grow: 2;
+  background: linear-gradient(135deg, #2f744d, #4fb37d);
+}
+
+.demo-flex-step-8-shrink {
+  width: 100%;
+}
+
+.demo-flex-step-8-shrink .flex-item {
+  flex-basis: 220px;
+  min-width: 0;
+}
+
+.demo-flex-step-8-shrink .item-shrink-0 {
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #35566b, #4f95ad);
+}
+
+.demo-flex-step-8-shrink .item-shrink-1 {
+  flex-shrink: 1;
+}
+
+.demo-flex-step-8-shrink .item-shrink-3 {
+  flex-shrink: 3;
+  background: linear-gradient(135deg, #2f744d, #4fb37d);
+}
+
+.demo-flex-step-9-basis {
+  align-items: center;
+}
+
+.demo-flex-step-9-basis .item-basis-120 {
+  flex-basis: 120px;
+  background: linear-gradient(135deg, #35566b, #4f95ad);
+}
+
+.demo-flex-step-9-basis .item-basis-220 {
+  flex-basis: 220px;
+  background: linear-gradient(135deg, #2f744d, #4fb37d);
+}
+
+.demo-flex-step-9-basis .item-basis-auto {
+  flex-basis: auto;
+}
+
+.demo-flex-step-8 {
+  min-height: 220px;
+  align-items: flex-end;
+}
+
+.demo-flex-step-8 .item-order {
+  order: -1;
+  background: linear-gradient(135deg, #37586d, #5e94a8);
+}
+
+.demo-flex-step-8 .item-self {
+  align-self: center;
+  flex: 2 1 140px;
+  background: linear-gradient(135deg, #2f744d, #4fb37d);
+}
